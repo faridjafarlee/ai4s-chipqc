@@ -4,7 +4,7 @@ Tool & Platform
 
 ## Demo Video
 
-[Watch the actual ChipQC demonstration](https://github.com/faridjafarlee/ai4s-chipqc/blob/main/demo/chipqc-demo.mp4)
+[Watch the actual ChipQC demonstration](https://www.youtube.com/watch?v=a4K4RDLJSao)
 
 ## Code Repository Link
 

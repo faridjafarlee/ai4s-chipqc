@@ -1,0 +1,8 @@
+{
+  "title": "ChipQC: Organ-on-a-Chip Quality Review | AI4S 2026 Demo",
+  "description": "A captioned demonstration of ChipQC, a research prototype for organ-on-a-chip brightfield image-quality review. Prepared for AI4S Open Innovation: AI for Life Science, Tool & Platform category.\n\nPublic code, checkpoints, and reproduction instructions:\nhttps://github.com/faridjafarlee/ai4s-chipqc\nTechnical report:\nhttps://github.com/faridjafarlee/ai4s-chipqc/blob/main/reports/TECHNICAL_REPORT.md\n\nThe actual running application is demonstrated using three acquisition-date-held-out cases. The complete retrospective study uses 3,072 microscopy images and five candidate models. The selected model reached date-held-out ROC AUC 0.748 (95% date-bootstrap interval 0.694–0.797). These are retrospective validation results, not prospective clinical or biological validation.\n\nThe 1:55 video is silent, with captions. Scientists retain the quality-review decision.\n\nMicroscopy attribution: Movčana et al., Organ-on-a-Chip (OOC) Image Dataset, Zenodo 2023. DOI: 10.5281/zenodo.10203721. Licensed CC BY 4.0: https://creativecommons.org/licenses/by/4.0/. Displayed source frames are resized for this demonstration.\n\nOriginal code and documentation: MIT. Pretrained MobileNetV3 Small weights are downloaded separately from the official PyTorch source.",
+  "channel_name": "Farid Talks AI & Tech",
+  "channel_id": "UC96UTIKp8KiLzz7izFH5pSQ",
+  "visibility": "unlisted",
+  "made_for_children": false
+}

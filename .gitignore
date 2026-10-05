@@ -8,5 +8,7 @@ __pycache__/
 *.pyc
 reports/app-smoke.html
 reports/kaggle-draft-status.png
+reports/youtube-published.png
+reports/kaggle-submitted.png
 demo/frames/
 demo/capture/

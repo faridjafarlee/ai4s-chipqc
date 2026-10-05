@@ -17,7 +17,7 @@ The selected frozen MobileNet + logistic regression model reached ROC AUC
 interval **0.694–0.797**), compared with **0.816** on random image folds.
 These are retrospective validation results, not a Kaggle ranking or score.
 
-[Watch the captioned 1:55 demonstration](demo/chipqc-demo.mp4) or read the
+[Watch the captioned 1:55 demonstration on YouTube](https://www.youtube.com/watch?v=a4K4RDLJSao) ([download MP4](demo/chipqc-demo.mp4)) or read the
 [technical report](reports/TECHNICAL_REPORT.md). The recorded examples use a
 checkpoint that excludes their acquisition dates.
 
