@@ -1,0 +1,14 @@
+fastapi==0.142.2
+joblib==1.6.0
+matplotlib==3.11.2
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+openpyxl==3.1.5
+pandas==3.0.6
+Pillow==12.3.0
+python-multipart==0.0.32
+requests==2.34.2
+scikit-learn==1.9.1
+torch==2.14.1
+torchvision==0.29.1
+uvicorn==0.54.0

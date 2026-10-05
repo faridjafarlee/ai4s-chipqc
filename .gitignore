@@ -1,0 +1,11 @@
+data/raw/
+data/images/
+data/*.csv
+data/*.npz
+.venv/
+__pycache__/
+*.pyc
+reports/app-smoke.html
+reports/kaggle-draft-status.png
+demo/frames/
+demo/capture/

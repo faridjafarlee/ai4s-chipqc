@@ -1,0 +1,36 @@
+1
+00:00:20,000 --> 00:00:22,081
+Actual running application. This checkpoint excludes the acquisition dates used in
+these examples.
+
+2
+00:00:22,081 --> 00:00:23,840
+Upload example 230320_47; source expert label: good.
+
+3
+00:00:23,840 --> 00:00:31,110
+Predicted good probability: 92.3%. The example illustrates the interface, not
+overall accuracy.
+
+4
+00:00:31,110 --> 00:00:32,851
+Upload example 230524_24; source expert label: bad.
+
+5
+00:00:32,851 --> 00:00:40,124
+Predicted good probability: 7.7%. The example illustrates the interface, not overall
+accuracy.
+
+6
+00:00:40,124 --> 00:00:41,884
+Upload example 230524_73; source expert label: good.
+
+7
+00:00:41,884 --> 00:00:48,936
+An uncertain estimate stays in the manual-review band. Scientist review is
+recommended.
+
+8
+00:00:48,936 --> 00:00:55,430
+Focus and appearance measurements support review. They do not establish biological
+function or safety.

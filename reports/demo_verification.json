@@ -1,0 +1,26 @@
+{
+  "cases": [
+    {
+      "role": "acceptable",
+      "imageID": "230320_47",
+      "displayed_prob_good": 0.9229999999999999,
+      "expected_oof_prob_good": 0.92308533,
+      "http_status": 200
+    },
+    {
+      "role": "poor",
+      "imageID": "230524_24",
+      "displayed_prob_good": 0.077,
+      "expected_oof_prob_good": 0.07681191,
+      "http_status": 200
+    },
+    {
+      "role": "review",
+      "imageID": "230524_73",
+      "displayed_prob_good": 0.5,
+      "expected_oof_prob_good": 0.49950257,
+      "http_status": 200
+    }
+  ],
+  "tiny_image_rejected": true
+}

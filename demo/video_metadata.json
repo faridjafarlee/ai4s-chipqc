@@ -1,0 +1,8 @@
+{
+  "duration_seconds": 115.416667,
+  "format": "1280x720 H.264, captioned",
+  "model": "mobilenet_logistic",
+  "study_images": 3072,
+  "source_credit": "Mov\u010dana et al., Zenodo 2023, DOI 10.5281/zenodo.10203721, CC BY 4.0",
+  "capture_note": "Frames captured from the running application; illustrative excluded-date cases"
+}

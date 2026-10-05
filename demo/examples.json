@@ -1,0 +1,57 @@
+{
+  "model_role": "date_holdout_demo",
+  "model_name": "mobilenet_logistic",
+  "n_training_images": 2468,
+  "note": "Selected illustrations, not a representative performance estimate",
+  "source": "https://doi.org/10.5281/zenodo.10203721; CC BY 4.0",
+  "examples": [
+    {
+      "role": "acceptable",
+      "imageID": "230320_47",
+      "path": "demo/capture/images/acceptable.png",
+      "expert_label": "good",
+      "acquisition_date": "230320",
+      "prob_good": 0.92308533,
+      "appearance_distance": 2.3049662113189697,
+      "metadata": {
+        "cell_type": "A549",
+        "day": 5,
+        "hours": null,
+        "flow": 2.0,
+        "density": 1000000.0
+      }
+    },
+    {
+      "role": "poor",
+      "imageID": "230524_24",
+      "path": "demo/capture/images/poor.png",
+      "expert_label": "bad",
+      "acquisition_date": "230524",
+      "prob_good": 0.07681191,
+      "appearance_distance": 2.0733518600463867,
+      "metadata": {
+        "cell_type": "HPMEC",
+        "day": 2,
+        "hours": null,
+        "flow": 1.74,
+        "density": 9000000.0
+      }
+    },
+    {
+      "role": "review",
+      "imageID": "230524_73",
+      "path": "demo/capture/images/review.png",
+      "expert_label": "good",
+      "acquisition_date": "230524",
+      "prob_good": 0.49950257,
+      "appearance_distance": 1.5529119968414307,
+      "metadata": {
+        "cell_type": "HPMEC",
+        "day": 2,
+        "hours": null,
+        "flow": 1.74,
+        "density": 9000000.0
+      }
+    }
+  ]
+}

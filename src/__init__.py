@@ -1,0 +1,1 @@
+"""ChipQC research prototype."""
