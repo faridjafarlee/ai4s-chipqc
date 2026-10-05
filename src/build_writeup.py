@@ -8,7 +8,6 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdRAat5jIunRaFNh_NntsVeJUnekEJDrbuokLZ32LFgCwPtiA/viewform"
 
 
 def main() -> None:
@@ -39,9 +38,7 @@ The working local application accepts an image, computes its model score, shows 
     for filename in ("validation_comparison.png", "selected_model_diagnostics.png"):
         report = report.replace(f"]({filename})", f"]({raw}{filename})")
     report = report.replace("](../README.md)", f"]({repo}/blob/main/README.md)")
-    content = f"""> Registration must be completed through the [official form]({FORM}) before final submission.
-
-## Category Declaration
+    content = f"""## Category Declaration
 
 Tool & Platform
 

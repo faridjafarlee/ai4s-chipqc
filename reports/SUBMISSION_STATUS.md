@@ -18,7 +18,7 @@ The draft is **not submitted**. Kaggle shows **5/7 checklist items complete**; t
 1. Enable Chrome's ChatGPT extension option **Allow access to file URLs** for the documented browser upload workflow, or upload the finished assets manually.
 2. Upload the demo to YouTube and add its accessible URL in the media gallery and Demo Video section. The current body links to the downloadable GitHub video.
 3. Upload the thumbnail and save the draft.
-4. Complete the organizer's mandatory registration form before submitting: https://docs.google.com/forms/d/e/1FAIpQLSdRAat5jIunRaFNh_NntsVeJUnekEJDrbuokLZ32LFgCwPtiA/viewform
+4. **Registration completed**, as confirmed by the participant on 5 October 2026. Organizer form: https://docs.google.com/forms/d/e/1FAIpQLSdRAat5jIunRaFNh_NntsVeJUnekEJDrbuokLZ32LFgCwPtiA/viewform
 5. Confirm the submitted writeup status. The deadline shown by Kaggle is **10 October 2026, 18:59 GMT+3**.
 
 No Kaggle prediction CSV is required for this writeup hackathon. Research validation numbers are not Kaggle scores or a ranking.

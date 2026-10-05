@@ -1,5 +1,3 @@
-> Registration must be completed through the [official form](https://docs.google.com/forms/d/e/1FAIpQLSdRAat5jIunRaFNh_NntsVeJUnekEJDrbuokLZ32LFgCwPtiA/viewform) before final submission.
-
 ## Category Declaration
 
 Tool & Platform
