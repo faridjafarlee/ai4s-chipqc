@@ -5,6 +5,7 @@ from __future__ import annotations
 import base64
 import html
 import io
+import math
 import os
 import tempfile
 from functools import lru_cache
@@ -48,6 +49,25 @@ def image_embedding(path: Path) -> list[float]:
         views = torch.stack([PREPROCESS(image), PREPROCESS(center)]).to(device)
     with torch.inference_mode():
         return encoder(views).cpu().numpy().reshape(-1).tolist()
+
+
+def predict_image(path: Path, metadata: dict | None = None) -> dict:
+    """Use the same frozen image pipeline for uploads and folder reports."""
+    measurements = image_features(path)
+    bundle = load_bundle()
+    record = {**measurements, "cell_type": "A549", "day": 1,
+              "time after seeding, h": None, "flow_ul_min": None,
+              "seeding_density": None, **(metadata or {})}
+    if bundle["name"] == "mobilenet_logistic":
+        record.update(zip(bundle["embedding_columns"], image_embedding(path)))
+    row = pd.DataFrame([record])
+    probability = float(bundle["model"].predict_proba(row[bundle["columns"]])[0, 1])
+    novelty = float(shift_distance(bundle["shift_screen"], row, bundle["image_columns"]))
+    if not math.isfinite(probability) or not 0 <= probability <= 1 or not math.isfinite(novelty):
+        raise ValueError("Model produced an invalid image result")
+    return {"prob_good": probability, "appearance_distance": novelty,
+            "appearance_flag": bool(novelty > bundle["shift_screen"]["threshold"]),
+            "measurements": measurements}
 
 
 def page(result: str = "", message: str = "") -> str:
@@ -128,17 +148,13 @@ async def analyze(image: UploadFile = File(...), cell_type: str = Form("A549"),
     with tempfile.TemporaryDirectory() as temporary:
         path = Path(temporary) / f"upload{suffix}"
         path.write_bytes(contents)
-        measurements = image_features(path)
-        bundle = load_bundle()
-        record = {**measurements, "cell_type": cell_type, "day": day,
-                  "time after seeding, h": hours, "flow_ul_min": flow,
-                  "seeding_density": density}
-        if bundle["name"] == "mobilenet_logistic":
-            record.update(zip(bundle["embedding_columns"], image_embedding(path)))
-        row = pd.DataFrame([record])
-        probability = float(bundle["model"].predict_proba(row[bundle["columns"]])[0, 1])
-        novelty = shift_distance(bundle["shift_screen"], row, bundle["image_columns"])
-        shift_flag = novelty > bundle["shift_screen"]["threshold"]
+        prediction = predict_image(path, {"cell_type": cell_type, "day": day,
+                                         "time after seeding, h": hours,
+                                         "flow_ul_min": flow, "seeding_density": density})
+        measurements = prediction["measurements"]
+        probability = prediction["prob_good"]
+        novelty = prediction["appearance_distance"]
+        shift_flag = prediction["appearance_flag"]
     if shift_flag:
         label, style = "Appearance shift · manual review", "review"
     elif probability >= 0.8:

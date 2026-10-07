@@ -1,0 +1,4 @@
+image,session,prob_good,appearance_distance,appearance_flag,review_flag,focus_proxy,brightness,edge_fraction,image_sha256,priority_rank,within_budget
+acceptable.png,Recorded illustrations from excluded dates,0.9230852914827543,2.3049662113189697,False,Likely acceptable · verify,4187.15771484375,155.23495483398438,0.356475830078125,2febd56e691456eb3473070f698cebf8452705e0a7f318aafab23650ddbce3d3,3,False
+poor.png,Recorded illustrations from excluded dates,0.0768120761127718,2.0733518600463867,False,Likely poor · inspect,6799.1884765625,129.09251403808594,0.2398681640625,7e4bbf88fd268429c2bbac6f31825387e82b3c03253cdcb8f7532b5081b66d33,1,True
+review.png,Recorded illustrations from excluded dates,0.4995026282916444,1.5529119968414307,False,Manual review recommended,9899.294921875,113.75581359863281,0.29345703125,b894bf3e2c16ace3f61c8afa7de4b1051ab286a0f0a4d94619f87e66e0fa9086,2,False

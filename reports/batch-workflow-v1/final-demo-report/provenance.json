@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-10-07T14:00:09.197832+00:00",
+  "session": "Recorded illustrations from excluded dates",
+  "images": 3,
+  "review_quota": 1,
+  "review_fraction": 0.3,
+  "priority_rule": "lowest P(good), then filename",
+  "model_name": "mobilenet_logistic",
+  "model_role": "date_holdout_demo",
+  "model_sha256": "831ab2e032e1186572628e3d78f43762b0bbfeacb16db13a96b441bf67829680",
+  "model_training_images": 2468,
+  "encoder_weights_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+  "encoder_weights_url": "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth",
+  "image_attribution": {
+    "credit": "Mov\u010dana et al., Organ-on-a-Chip (OOC) Image Dataset, Zenodo 2023, CC BY 4.0",
+    "source_url": "https://doi.org/10.5281/zenodo.10203721",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "JPEG previews resized and compressed; review annotations added"
+  },
+  "native_encoder_device": "mps",
+  "elapsed_seconds": 1.1903279580001254,
+  "input_hashes": {
+    "acceptable.png": "2febd56e691456eb3473070f698cebf8452705e0a7f318aafab23650ddbce3d3",
+    "poor.png": "7e4bbf88fd268429c2bbac6f31825387e82b3c03253cdcb8f7532b5081b66d33",
+    "review.png": "b894bf3e2c16ace3f61c8afa7de4b1051ab286a0f0a4d94619f87e66e0fa9086"
+  },
+  "source_hashes": {
+    "app.py": "f2f0f911cf364e50a4b89db01b131c34ddf157541add2def0cfd15766c230119",
+    "batch_review.py": "5dcec0be3361286b3830d5f8dd7b215d213d4456bde357d712082ee806528e70",
+    "features.py": "41a6c9e802ee223d20c2bdde3654506b6df2431bcb4b54bd6ade34fe4198d4a8",
+    "embeddings.py": "8d2a7210f863094f950fcb732b2e869262643d1bd4b9cdd60f4014882b621836",
+    "shift.py": "2c83dac340f610123e00b21291be81d37aa029a0dacb4b6b59b31f82da6e6c62"
+  },
+  "output_hashes": {
+    "predictions.csv": "ee014c1c6991c6cc1ab5af53ae102d043f64217c5cfc131ba88a9bde050adc65",
+    "index.html": "e38875d847474f3c4c58bf4c3c69a59d3e932f02ffb86cba5f5ae29c129220e3"
+  },
+  "model_fitting": false,
+  "accuracy_measured": false
+}

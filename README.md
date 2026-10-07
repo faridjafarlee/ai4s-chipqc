@@ -69,6 +69,43 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m src.evaluate
 
 Open <http://127.0.0.1:8000> and upload a microscopy frame. The reported study uses all 3,072 images. For a smaller development run, `--limit 1200` selects images deterministically by image-ID hash. `data/selection.csv` controls the evaluation population even when more images are already cached. The archive is about 6.7 GB. The downloader uses HTTP ranges, verifies each downloaded ZIP member's CRC, and throttles requests to respect Zenodo's rate limit. It also downloads and checks the label spreadsheet. The pretrained MobileNetV3 Small weights are fetched from the official PyTorch model URL with TLS verification and a pinned full SHA-256 checksum.
 
+### Review an imaging session folder
+
+With the existing model and cached encoder weights, run:
+
+```bash
+.venv/bin/python -m src.batch_review /path/to/session-images \
+  --output reports/my-session-review --session "Imaging session 1" \
+  --review-fraction 0.3
+```
+
+The folder workflow uses the same image prediction function as the upload app. It creates `predictions.csv`, a standalone `index.html` with image previews, and `provenance.json`. The output directory must be new. PNG, JPEG and TIFF are supported; the default limit is 100 images. Review priority follows lowest estimated P(good), with a user-selected quota. Frames outside that quota are not marked safe. Session names are user supplied, without inferring chip or patient identity.
+
+For the recorded examples, use `CHIPQC_MODEL_PATH=models/chipqc-demo-heldout.joblib` and `demo/capture/images`. [Actual workflow verification](reports/batch-workflow-v1/README.md) covers native predictions, CSV/HTML output and the existing HTTP upload route. It is a functional test on selected illustrations, not a new accuracy evaluation.
+
+When sharing images with attribution requirements, supply `--image-credit`,
+`--image-source-url` and `--image-license-url` together. The standalone HTML and
+provenance retain the credit, links and preview modifications. The recorded
+dataset illustrations use Movčana et al., Zenodo 2023, CC BY 4.0; the
+[final report](reports/batch-workflow-v1/final-demo-report/index.html) includes
+that attribution explicitly.
+
+Check the frozen final report with Python's standard library only:
+
+```bash
+python3 -m src.verify_batch_review \
+  --report reports/batch-workflow-v1/final-demo-report \
+  --manifest reports/batch-workflow-v1/final-run-manifest.json \
+  --output reports/batch-workflow-v1/reproduced-verification.json
+```
+
+This checks current source/model bytes, saved output hashes, identity/priority,
+visible attribution and recorded-example probability tolerance without inference
+or downloads. Add `--inputs demo/capture/images` to verify actual cached input
+bytes too. The final genuine three-image CLI run used MPS, took **1.19 seconds
+after imports**, and agreed with saved examples within **1.67×10⁻⁷** absolute.
+These selected illustrations do not establish new accuracy or general throughput.
+
 ## Files and outputs
 
 - `src/fetch_ooc.py`: source manifest and selective image download.

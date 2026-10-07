@@ -1,0 +1,14 @@
+{
+  "frozen_utc": "2026-10-07T13:41:47.309112+00:00",
+  "scope": "Functional batch workflow with existing frozen heldout-demo model, not a new validation/model experiment",
+  "original_app_sha256": "1f1fd11c92ccd22e6b75f3a7f69d7a1b32a06198cc9bf55ac2ad022b7a4a7903",
+  "model_path": "models/chipqc-demo-heldout.joblib",
+  "model_sha256": "831ab2e032e1186572628e3d78f43762b0bbfeacb16db13a96b441bf67829680",
+  "sample": "The3already selected recorded demo images; exclude their dates from checkpoint training; no fresh performance claim",
+  "outputs": "CSV, standalone HTML, provenance JSON; same probability/appearance helper as web upload",
+  "comparison": "Native predictions versus saved demo examples <=1e-5 absolute; model SHA unchanged; exact CSV/HTML coverage and deterministic priority order; actual web upload route remains functional",
+  "no_new_model_fitting": true,
+  "no_external_downloads": true,
+  "review_budget_rule": "User-configured fraction, ceil(n*fraction), rank lowest P(good) first; this is an illustrative operational quota, not a guarantee",
+  "discussion_review": "competition-discussions/ai-4-s-open-innovation-artificial-intelligence-for-life-scien/2026-10-07T1338Z/review.json"
+}
