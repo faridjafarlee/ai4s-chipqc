@@ -40,6 +40,14 @@ weights. The saved receipt takes about 0.05 seconds on the development machine;
 this is metric verification, not a rerun of training or the bootstrap intervals.
 See [the verification results](reports/METRICS_VERIFICATION.md).
 
+With the Python 3.13 environment and source images cached as described below,
+run `.venv/bin/python -m src.build_failure_gallery` to reproduce the
+[four selected image-score disagreements](reports/failure_gallery.png).
+The [gallery report](reports/FAILURE_GALLERY.md) and
+[selection manifest](reports/failure_gallery_manifest.json) document the fixed
+selection rule, source attribution and hash/probability checks; this command
+reads saved predictions and performs no training or model inference.
+
 ### Recreate features, training and the local app
 
 Use Python 3.13. From this directory:

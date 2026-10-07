@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "selection_rule": "Restrict to the saved first date-held-out validation fold. Select two bad expert-label frames with the highest saved P(good) >=0.8, then two good expert-label frames with the lowest saved P(good) <=0.2. Break ties by imageID.",
+  "scope": "Selected image-score disagreements from the first date-held-out validation fold",
+  "inputs": {
+    "sha256": {
+      "reports/grouped_oof_predictions.csv": "203bc5fa780ec1c63aae3fdf74c51ee69412b18ee1429f2801644719c5090857",
+      "reports/demo_holdout_manifest.csv": "bc4739df1d817173031dcb172dc58bc3f975c06ca7305b2b9412c3a04473f959",
+      "data/image_manifest.csv": "a20ada728174316be12dc273444479fda02a55d7a1b76068f3e82dfd26b0145f"
+    },
+    "holdout_rows_checked": 604,
+    "oof_probability_column": "mobilenet_logistic_prob_good",
+    "absolute_probability_tolerance": 1e-07
+  },
+  "selected": [
+    {
+      "imageID": "230215_24",
+      "expert_label": "bad",
+      "good": 0,
+      "cell_type": "HPMEC",
+      "acquisition_date": "230215",
+      "date_display": "2023-02-15",
+      "category": "bad_label_high_score",
+      "holdout_prob_good_raw": "0.9973124",
+      "grouped_oof_prob_good_raw": "0.9973124265670776",
+      "absolute_probability_difference": 2.656707764892019e-08,
+      "holdout_csv_line": 144,
+      "oof_csv_line": 889,
+      "source_archive_path": "OOC_image_dataset/train/bad/cell_type_HPMEC/0-1_days/230215_24.png",
+      "source_split": "train",
+      "local_image": "data/images/230215_24.png",
+      "image_bytes": 4463323,
+      "image_sha256": "dcb119fd4895681a70edf2c88c78a8c266cefb3aed4f8ab113d2e41d38d5a629",
+      "source_width": 2048,
+      "source_height": 1536,
+      "source_mode": "RGB"
+    },
+    {
+      "imageID": "230215_23",
+      "expert_label": "bad",
+      "good": 0,
+      "cell_type": "HPMEC",
+      "acquisition_date": "230215",
+      "date_display": "2023-02-15",
+      "category": "bad_label_high_score",
+      "holdout_prob_good_raw": "0.995452",
+      "grouped_oof_prob_good_raw": "0.9954519867897034",
+      "absolute_probability_difference": 1.3210296634369456e-08,
+      "holdout_csv_line": 143,
+      "oof_csv_line": 888,
+      "source_archive_path": "OOC_image_dataset/test/bad/cell_type_HPMEC/0-1_days/230215_23.png",
+      "source_split": "test",
+      "local_image": "data/images/230215_23.png",
+      "image_bytes": 4467344,
+      "image_sha256": "f768e831ad9b4be31b9caa9007b1b42677252b849dea40a84e8909087518db70",
+      "source_width": 2048,
+      "source_height": 1536,
+      "source_mode": "RGB"
+    },
+    {
+      "imageID": "230320_142",
+      "expert_label": "good",
+      "good": 1,
+      "cell_type": "NHBE",
+      "acquisition_date": "230320",
+      "date_display": "2023-03-20",
+      "category": "good_label_low_score",
+      "holdout_prob_good_raw": "0.071219586",
+      "grouped_oof_prob_good_raw": "0.07121958583593369",
+      "absolute_probability_difference": 1.6406631608845146e-10,
+      "holdout_csv_line": 200,
+      "oof_csv_line": 1239,
+      "source_archive_path": "OOC_image_dataset/train/good/cell_type_NHBE/4+_days/230320_142.png",
+      "source_split": "train",
+      "local_image": "data/images/230320_142.png",
+      "image_bytes": 1838005,
+      "image_sha256": "973ff13bda4b85a07a0a9afc47510c2f370adb5b8946724ef0fb5ba1b4eb239c",
+      "source_width": 2056,
+      "source_height": 1542,
+      "source_mode": "L"
+    },
+    {
+      "imageID": "230320_107",
+      "expert_label": "good",
+      "good": 1,
+      "cell_type": "HPMEC",
+      "acquisition_date": "230320",
+      "date_display": "2023-03-20",
+      "category": "good_label_low_score",
+      "holdout_prob_good_raw": "0.09295747",
+      "grouped_oof_prob_good_raw": "0.09295746684074402",
+      "absolute_probability_difference": 3.1592559818216515e-09,
+      "holdout_csv_line": 161,
+      "oof_csv_line": 1200,
+      "source_archive_path": "OOC_image_dataset/train/good/cell_type_HPMEC/4+_days/230320_107.png",
+      "source_split": "train",
+      "local_image": "data/images/230320_107.png",
+      "image_bytes": 1881721,
+      "image_sha256": "6e06bf0d211022bba0977c0b64e75ddaefb22b2b69b0df9903e1721e5e7bbf60",
+      "source_width": 2056,
+      "source_height": 1542,
+      "source_mode": "L"
+    }
+  ],
+  "checks": {
+    "frozen_csv_hashes_match": true,
+    "expected_four_ids_match": true,
+    "all_holdout_probabilities_and_metadata_agree": true,
+    "selected_source_image_hashes_and_metadata_match": true
+  },
+  "execution": {
+    "model_fitting": false,
+    "model_inference": false,
+    "aggregate_metrics_recomputed": false,
+    "source_images_modified": false
+  },
+  "display": {
+    "full_frame": true,
+    "aspect_ratio_preserved": true,
+    "color_grayscale_preserved": true,
+    "resampling": "Lanczos",
+    "output_pixels": [
+      2400,
+      2250
+    ]
+  },
+  "attribution": {
+    "visible_text": "Images: Movčana et al., Zenodo 2023, DOI 10.5281/zenodo.10203721, CC BY 4.0; resized.",
+    "dataset_url": "https://doi.org/10.5281/zenodo.10203721",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "figure": {
+    "path": "reports/failure_gallery.png",
+    "sha256": "fc334da992092a35b1683a82d035f9eadcea1963ba607518322c039981a05e2d"
+  }
+}
