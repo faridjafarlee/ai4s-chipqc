@@ -21,6 +21,9 @@ These are retrospective validation results, not a Kaggle ranking or score.
 [technical report](reports/TECHNICAL_REPORT.md). The recorded examples use a
 checkpoint that excludes their acquisition dates.
 
+The video includes a manual English subtitle track. Its 18 cues were verified
+against the [published caption source](demo/chipqc-demo.en.published.srt).
+
 ![An uncertain frame sent for scientist review](assets/demo-review.png)
 
 ## Reproduce
