@@ -25,6 +25,23 @@ checkpoint that excludes their acquisition dates.
 
 ## Reproduce
 
+### Check the published metrics without downloading images
+
+From this directory, run with Python's standard library only:
+
+```bash
+python3 -m src.verify_metrics --output reports/metrics-verification.json
+```
+
+This checks the frozen prediction and evaluation hashes and recomputes all five
+date-held-out models' pooled metrics, the selected model's random-fold metrics,
+illustrative score bands, and review-queue results. It reads no images or model
+weights. The saved receipt takes about 0.05 seconds on the development machine;
+this is metric verification, not a rerun of training or the bootstrap intervals.
+See [the verification results](reports/METRICS_VERIFICATION.md).
+
+### Recreate features, training and the local app
+
 Use Python 3.13. From this directory:
 
 ```bash

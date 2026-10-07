@@ -1,0 +1,160 @@
+{
+  "status": "PASS_FROZEN_PREDICTION_METRICS",
+  "checked_utc": "2026-10-07T00:10:39.963926+00:00",
+  "input_sha256": {
+    "grouped_oof_predictions.csv": "203bc5fa780ec1c63aae3fdf74c51ee69412b18ee1429f2801644719c5090857",
+    "evaluation.json": "e198e572d53d9519a42c9d140f9591be157b75bdc5ec928887047e86980c9020"
+  },
+  "source_sha256": "f7d1f8ed618a6d8795d4d22f89c900bf79773e801730660b28355f0318a19b09",
+  "rows": 3072,
+  "acquisition_dates": 59,
+  "comparison_tolerance": 1e-12,
+  "selected_model": "mobilenet_logistic",
+  "date_grouped_metrics_recomputed": {
+    "metadata_logistic": {
+      "n": 3072,
+      "good_share": 0.5621744791666666,
+      "roc_auc": 0.6515768582517334,
+      "average_precision": 0.6982315976308653,
+      "balanced_accuracy": 0.6039869727033793,
+      "brier": 0.22911104584029993,
+      "confusion_bad_good": [
+        [
+          740,
+          605
+        ],
+        [
+          591,
+          1136
+        ]
+      ]
+    },
+    "image_logistic": {
+      "n": 3072,
+      "good_share": 0.5621744791666666,
+      "roc_auc": 0.7145545383510955,
+      "average_precision": 0.7329050420565935,
+      "balanced_accuracy": 0.6701977987915525,
+      "brier": 0.21401267976055224,
+      "confusion_bad_good": [
+        [
+          753,
+          592
+        ],
+        [
+          379,
+          1348
+        ]
+      ]
+    },
+    "image_boosted": {
+      "n": 3072,
+      "good_share": 0.5621744791666666,
+      "roc_auc": 0.7371581464731372,
+      "average_precision": 0.7328240500657375,
+      "balanced_accuracy": 0.6746449889466014,
+      "brier": 0.21062183733134202,
+      "confusion_bad_good": [
+        [
+          793,
+          552
+        ],
+        [
+          415,
+          1312
+        ]
+      ]
+    },
+    "fusion_boosted": {
+      "n": 3072,
+      "good_share": 0.5621744791666666,
+      "roc_auc": 0.7456560251246871,
+      "average_precision": 0.7685683252182007,
+      "balanced_accuracy": 0.6750851875848916,
+      "brier": 0.20983432756307333,
+      "confusion_bad_good": [
+        [
+          823,
+          522
+        ],
+        [
+          452,
+          1275
+        ]
+      ]
+    },
+    "mobilenet_logistic": {
+      "n": 3072,
+      "good_share": 0.5621744791666666,
+      "roc_auc": 0.7476019398875933,
+      "average_precision": 0.7796839631997045,
+      "balanced_accuracy": 0.682645195592417,
+      "brier": 0.2105458876470503,
+      "confusion_bad_good": [
+        [
+          841,
+          504
+        ],
+        [
+          449,
+          1278
+        ]
+      ]
+    }
+  },
+  "selected_image_random_metrics_recomputed": {
+    "n": 3072,
+    "good_share": 0.5621744791666666,
+    "roc_auc": 0.8159134498442623,
+    "average_precision": 0.8369028644970518,
+    "balanced_accuracy": 0.7313425735583764,
+    "brier": 0.17258711540078744,
+    "confusion_bad_good": [
+      [
+        891,
+        454
+      ],
+      [
+        345,
+        1382
+      ]
+    ]
+  },
+  "selected_random_minus_grouped_auc": 0.06831150995666901,
+  "illustrative_20_80_bands": {
+    "confident_fraction": 0.4554036458333333,
+    "confident_balanced_accuracy": 0.7888762065718226,
+    "n_predicted_good_at_least_0_8": 793,
+    "bad_fraction_in_predicted_good_at_least_0_8": 0.16897856242118536
+  },
+  "equal_width_10_bin_ece": 0.07994133222556836,
+  "review_queues": {
+    "fraction_requested": 0.3,
+    "budget_rule": "ceil(fraction * all_frames)",
+    "within_date_quota_rule": "floor per date, largest fractional remainders, date-ID ties",
+    "ranking_rule": "ascending P(good), then imageID; no labels used in selection",
+    "total_bad_frames": 1345,
+    "pooled_across_dates": {
+      "reviewed": 922,
+      "bad_found": 645,
+      "bad_recall": 0.4795539033457249,
+      "bad_precision": 0.6995661605206074
+    },
+    "within_each_date": {
+      "reviewed": 922,
+      "bad_found": 508,
+      "bad_recall": 0.37769516728624536,
+      "bad_precision": 0.5509761388286334
+    },
+    "random_same_date_quotas": {
+      "expected_bad_found": 404.4525847993834,
+      "expected_bad_recall": 0.3007082414865304
+    },
+    "prospective_workflow_benefit_measured": false
+  },
+  "bootstrap_intervals_recomputed": false,
+  "models_or_original_folds_retrained": false,
+  "images_or_model_weights_loaded": false,
+  "scope": "Checks saved retrospective OOF predictions; does not independently reproduce training or prospective performance.",
+  "elapsed_seconds": 0.04695270900265314
+}

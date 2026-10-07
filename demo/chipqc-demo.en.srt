@@ -1,0 +1,86 @@
+1
+00:00:00,000 --> 00:00:07,000
+ChipQC: organ-on-a-chip image review.
+A working local tool and reproducible study.
+
+2
+00:00:07,000 --> 00:00:13,000
+3,072 brightfield frames; six cell types;
+59 acquisition-date prefixes.
+
+3
+00:00:13,000 --> 00:00:20,000
+Does a model handle unseen imaging dates?
+Scores estimate the experts' good/bad label.
+
+4
+00:00:20,000 --> 00:00:22,081
+Actual running application. This checkpoint excludes the acquisition dates used in
+these examples.
+
+5
+00:00:22,081 --> 00:00:23,840
+Upload example 230320_47; source expert label: good.
+
+6
+00:00:23,840 --> 00:00:31,110
+Predicted good probability: 92.3%. The example illustrates the interface, not
+overall accuracy.
+
+7
+00:00:31,110 --> 00:00:32,851
+Upload example 230524_24; source expert label: bad.
+
+8
+00:00:32,851 --> 00:00:40,124
+Predicted good probability: 7.7%. The example illustrates the interface, not overall
+accuracy.
+
+9
+00:00:40,124 --> 00:00:41,884
+Upload example 230524_73; source expert label: good.
+
+10
+00:00:41,884 --> 00:00:48,936
+An uncertain estimate stays in the manual-review band. Scientist review is
+recommended.
+
+11
+00:00:48,936 --> 00:00:55,430
+Focus and appearance measurements support review. They do not establish biological
+function or safety.
+
+12
+00:00:55,430 --> 00:01:09,430
+Five candidates: compare random image folds
+with folds excluding entire acquisition dates.
+
+13
+00:01:09,430 --> 00:01:17,430
+Selected model: MobileNet + logistic regression.
+AUC: 0.748 with dates held out; 0.816 on random folds.
+
+14
+00:01:17,430 --> 00:01:26,430
+Date-bootstrap 95% interval: 0.694 to 0.797.
+New labs and biological function remain untested.
+
+15
+00:01:26,430 --> 00:01:34,430
+Install pinned dependencies, then fetch images
+and compute features and MobileNet embeddings.
+
+16
+00:01:34,430 --> 00:01:43,430
+Run the evaluation and follow the README
+to start the held-out demonstration checkpoint.
+
+17
+00:01:43,430 --> 00:01:49,430
+Images: Movčana et al., Zenodo 2023.
+DOI 10.5281/zenodo.10203721; CC BY 4.0.
+
+18
+00:01:49,430 --> 00:01:55,416
+Original code: MIT. A research review aid.
+Scientists retain the decision.

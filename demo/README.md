@@ -24,7 +24,10 @@ Raw captures and copied microscopy frames are excluded from Git. The final
 video and its captions are provided as demonstration artifacts.
 
 Watch `chipqc-demo.mp4`; the captions are burned into the application capture.
-`chipqc-demo.srt` is also available. The video is silent. Rendering uses Pillow
+`chipqc-demo.srt` is also available. The full English caption track,
+`chipqc-demo.en.srt`, covers the slides and app from 0:00 to 1:55.416;
+it is prepared locally for upload to the existing YouTube video. The video is
+silent. Rendering uses Pillow
 and a locally installed FFmpeg; rerender with `python -m src.render_demo` when
 the ignored `capture/` source frames are available. Reproducing the model and
 application does not require FFmpeg or the original recording frames.
